@@ -6,3 +6,15 @@ module.exports = {
   },
   plugins: [],
 }
+
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'Inter': ['"Inter"', 'sans-serif']
+      }
+    }
+  }
+}
+
+
