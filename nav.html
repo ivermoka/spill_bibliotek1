@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="app.js" rel="stylesheet"></script>
     <title>nav demo</title>
 </head>
 <body>
@@ -17,18 +18,23 @@
             <div class="height-full">
                 <img src="imgelias/logo.png" alt="logo" class="h-full w-full hover:animate-spin cursor-pointer">
             </div>
-            <div class="text-white text-2xl flex justify-between items-center w-80 h-full">
+            <div class="text-white text-xl flex justify-between items-center w-80 h-full">
                 <span class="cursor-pointer">PlayStation</span>
                 <span class="cursor-pointer">Xbox</span>
                 <span class="cursor-pointer">Nintendo</span>
             </div>
         </div> 
-        <div class="lg:hidden md:hidden sm:block block cursor-pointer">
-            <svg viewBox="0 0 24 24" width="34" height="50" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <div class="lg:hidden md:hidden sm:block block">
+            <svg class="cursor-pointer" viewBox="0 0 24 24" width="34" height="50" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
                 <line x1="3" y1="18" x2="21" y2="18"></line>
               </svg>
+            <div class="bg-red-400 text-white text-xl h-20 px-5 absolute w-screen left-0 mt-3 flex items-center justify-between">
+                <span class="cursor-pointer">PlayStation</span>
+                <span class="cursor-pointer">Xbox</span>
+                <span class="cursor-pointer">Nintendo</span>
+            </div>
         </div>
         <div class="h-2/3">
             <img src="imgelias/logo.png" alt="logo" class="h-full w-full hover:animate-spin lg:hidden md:hidden sm:block block cursor-pointer">
