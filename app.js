@@ -7,10 +7,15 @@ let expanded = false;
 hamburger.addEventListener("click", () => {
     if (expanded === false) {
         dropdown.style.display = "flex";
-        dropdown.style.transform =" translateX(0%)"
+        // hamburger.style.transform = "rotate(90deg)"
         expanded = true;
     } else if (expanded === true) {
         dropdown.style.display = "none";
+        // hamburger.style.transform = "rotate(180deg)"
         expanded = false;
     }
 }); 
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+});

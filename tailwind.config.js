@@ -17,4 +17,17 @@ module.exports = {
   }
 }
 
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        hamburgerspin: {
+          '0%, 100%': { transform: 'rotate(90deg)' },
+          '50%': { transform: 'rotate(180deg)' },
+        }
+      }
+    }
+  }
+}
+
 

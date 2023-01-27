@@ -5,3 +5,17 @@ body {
 }
 
 /* Nav bar drop down effect */
+
+.hamburger-line {
+    transition: transform 0.5s;
+}
+
+#hamburger.active .hamburger-line:nth-of-type(1) {
+    transform: rotate(45deg) translate(4px, -3px);
+}
+#hamburger.active .hamburger-line:nth-of-type(2) {
+    opacity: 0;
+}
+#hamburger.active .hamburger-line:nth-of-type(3) {
+    transform: rotate(-45deg) translate(-11px, 8px);
+}
