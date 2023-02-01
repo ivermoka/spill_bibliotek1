@@ -26,6 +26,7 @@ $sql_fetch_things = "SELECT * FROM Brukere";
 
 $result = mysqli_query($conn, $sql_fetch_things);
 while( $row = $result->fetch_array()){
+
   //print_r($row);
   echo "<br />";
   echo "BrukerID: " . $row["BrukerID"] . "<br />";

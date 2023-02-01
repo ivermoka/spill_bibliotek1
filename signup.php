@@ -16,6 +16,9 @@
     <title>Sign Up</title>
   </head>
   <body>
+    <?php
+      
+    ?>
     <form method="post">
       <input
         type="submit"
