@@ -21,6 +21,7 @@ if(isset($_REQUEST['registrer'])){
   $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (2, '$brukernavn', '$passord', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
   echo $sql;
   $result = mysqli_query($conn, $sql);
+  
 }
 
 
