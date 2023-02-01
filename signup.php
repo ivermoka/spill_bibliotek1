@@ -17,7 +17,16 @@
   </head>
   <body>
     <?php
-      
+      include 'index.php'
+      while( $row = $result->fetch_array()){
+
+        //print_r($row);
+        echo "<br />";
+        echo "BrukerID: " . $row["BrukerID"] . "<br />";
+        echo "Brukernavn: " . $row["Brukernavn"] . "<br />";
+        echo "Passord: " . $row["Passord"] . "<br />";
+        echo "Email: " . $row["Email"] . "<br />";
+      }
     ?>
     <form method="post">
       <input

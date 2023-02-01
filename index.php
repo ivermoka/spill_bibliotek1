@@ -19,22 +19,12 @@ if (!$conn){
 echo "Connection succeessfully";
 
 
-$sql = "DELETE FROM Brukere WHERE BrukerID = 2";
-$result = mysqli_query($conn, $sql) 
+// $sql = "DELETE FROM Brukere WHERE BrukerID = 2";
+// $result = mysqli_query($conn, $sql) 
 
 $sql_fetch_things = "SELECT * FROM Brukere";
 
 $result = mysqli_query($conn, $sql_fetch_things);
-while( $row = $result->fetch_array()){
-
-  //print_r($row);
-  echo "<br />";
-  echo "BrukerID: " . $row["BrukerID"] . "<br />";
-  echo "Brukernavn: " . $row["Brukernavn"] . "<br />";
-  echo "Passord: " . $row["Passord"] . "<br />";
-  echo "Email: " . $row["Email"] . "<br />";
-}
-
 
 echo "<td>" . $result;
 ?>
