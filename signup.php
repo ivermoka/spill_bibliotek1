@@ -16,10 +16,14 @@
     <title>Sign Up</title>
   </head>
   <body>
-    <?php
-
-      ?>
+  
       <div class="inset-x-0 top-0 absolute">
+      <form action="index.php" method = "post">
+        Brukernavn:<input type="text" name="brukernavn"><br>
+        Passord:<input type="text" name="passord"><br>
+        <input type ="submit" name="registrer">
+
+      </form>
         <main class="h-screen m-0 flex items-center justify-center">
           <form
             class="bg-slate-500 w-2/5 h-5/6 rounded-md flex flex-col justify-center items-center gap-2"
@@ -44,12 +48,7 @@
           </form>
         </main>
       </div>
-    <form action="index.php" method = "post">
-        Name:<input type="text" name="name"><br>
-        Passord:<input type="text" name="passord"><br>
-        <input type ="submit">
-
-    </form>
+    
     <div class="inset-x-0 top-0"></div>
   </body>
 </html>
