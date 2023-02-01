@@ -86,3 +86,16 @@ buttonNin.addEventListener("click", () => {
 buttonNin.addEventListener("click", () => {
   buttonNin.classList.toggle("active");
 });
+
+nav = document.getElementById("navbar")
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  console.log("hei")
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      nav.style.top = "0";
+    } else {
+      nav.style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+}
