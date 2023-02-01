@@ -15,29 +15,35 @@
     <script defer src="app.js" rel="stylesheet"></script>
     <title>Sign Up</title>
   </head>
-<<<<<<< HEAD
-  <body class="overflow-hidden">
-    <div class="inset-x-0 top-0 absolute">
-      <main class="h-screen m-0 flex items-center justify-center">
-        <form
-          class="bg-slate-500 w-2/5 h-5/6 rounded-md flex justify-center items-center"
-        >
-          <h1 class="text-slate-100 text-2xl">Sign Up</h1>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <span></span>
-          <span></span>
-        </form>
-      </main>
-    </div>
-=======
   <body>
     <?php
-      include 'index.php'
-      while( $row = $result->fetch_array()){
 
+      $db_host = 'localhost';
+      $db_user = 'root';
+      $db_password = 'root';
+      $db_db = 'Spillbibliotek1';
+      $db_port = 8888;
+      $mysqli = new mysqli(
+        $db_host,
+        $db_user,
+        $db_password,
+        $db_db
+      );
+      $conn = mysqli_connect($db_host, $db_user, $db_password, $db_db );
+      
+      if (!$conn){
+          die("connection failed: " . mysqli_connect_error());
+      }
+      echo "Connection succeessfully";
+      
+      
+      $sql = "DELETE FROM Brukere WHERE BrukerID = 2";
+      $result = mysqli_query($conn, $sql) 
+      
+      $sql_fetch_things = "SELECT * FROM Brukere";
+      
+      $result = mysqli_query($conn, $sql_fetch_things);
+      while( $row = $result->fetch_array()){
         //print_r($row);
         echo "<br />";
         echo "BrukerID: " . $row["BrukerID"] . "<br />";
@@ -45,7 +51,10 @@
         echo "Passord: " . $row["Passord"] . "<br />";
         echo "Email: " . $row["Email"] . "<br />";
       }
-    ?>
+      
+      
+      echo "<td>" . $result;
+      ?>
     <form method="post">
       <input
         type="submit"
@@ -55,6 +64,5 @@
       />
     </form>
     <div class="inset-x-0 top-0"></div>
->>>>>>> e13b198f384e89dad4950b0a9af10452f0f89874
   </body>
 </html>
