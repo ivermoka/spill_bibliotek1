@@ -13,14 +13,17 @@ $mysqli = new mysqli(
 );
 $conn = mysqli_connect($db_host, $db_user, $db_password, $db_db );
 
+$name = $_POST["name"];
+$passord = $_POST["passord"];
+
 if (!$conn){
     die("connection failed: " . mysqli_connect_error());
 }
 echo "Connection succeessfully";
 
 
-$sql = "DELETE FROM Brukere WHERE BrukerID = 2";
-$result = mysqli_query($conn, $sql) 
+$sql = "INSERT INTO Brukere (Brukernavn) VALUE ($name) ";
+$result = mysqli_query($conn, $sql);
 
 $sql_fetch_things = "SELECT * FROM Brukere";
 
