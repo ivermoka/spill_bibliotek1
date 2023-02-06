@@ -21,8 +21,13 @@ if(isset($_REQUEST['registrer'])){
   $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (2, '$brukernavn', '$passord', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
   echo $sql;
   $result = mysqli_query($conn, $sql);
-  
+  if (mysqli_query($conn, $sql)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+}
+
 
 
 if (!$conn){
