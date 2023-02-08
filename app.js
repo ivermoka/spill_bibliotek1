@@ -159,3 +159,36 @@ left.addEventListener("click", () => {
   });
   images[i].style.display = "block";
 });
+
+const leftSale = document.querySelector("#left-sale");
+const rightSale = document.querySelector("#right-sale");
+
+let iSale = 0;
+
+let img1Sale = document.querySelector("#img1-sale");
+let img2Sale = document.querySelector("#img-sale");
+let img3Sale = document.querySelector("#img3-sale");
+
+let imagesSale = [img1Sale, img2Sale, img3Sale];
+
+rightSale.addEventListener("click", () => {
+  iSale++;
+  if (iSale === imagesSale.length) {
+    iSale = 0;
+  }
+  imagesSale.forEach((image) => {
+    image.style.display = "none";
+  });
+  imagesSale[iSale].style.display = "block";
+});
+
+leftSale.addEventListener("click", () => {
+  iSale--;
+  if (iSale < 0) {
+    iSale = imagesSale.length - 1;
+  }
+  imagesSale.forEach((image) => {
+    image.style.display = "none";
+  });
+  imagesSale[iSale].style.display = "block";
+});
