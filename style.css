@@ -26,3 +26,18 @@ body {
   transform: rotate(-45deg) translate(-11px, 8px);
 }
 
+.carousel-item {
+  position: relative;
+  z-index: 1;
+}
+.carousel-item-center {
+  z-index: 2;
+}
+.carousel-item-left {
+  transform: translateX(-50%) scale(0.75);
+  z-index: 1;
+}
+.carousel-item-right {
+  transform: translateX(50%) scale(0.75);
+  z-index: 1;
+}
