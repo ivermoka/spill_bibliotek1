@@ -34,6 +34,13 @@ if (!$mysqli){
 }
 echo "Connection succeessfully";
 
+$Select_Spill = "SELECT * FROM Spill"
+
+
+
+$data = array();
+
+
 // $sql_fetch_things = "SELECT * FROM Brukere";
 
 // $result = mysqli_query($conn, $sql_fetch_things);
