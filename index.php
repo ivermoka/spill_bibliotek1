@@ -40,7 +40,7 @@ $result = mysqli_query($mysqli, $Select_Spill)
 if ($result->num_rows> 0){
   $data = array();
   while ($row = $result ->fetch_assoc()){
-    $data[]=$rox
+    $data[]=$row
   }
 }
 
