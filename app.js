@@ -65,13 +65,12 @@ buttonXbox.addEventListener("click", () => {
   buttonXbox.classList.toggle("active");
 });
 
-
 const buttonNin = document.querySelector("#nintendo");
 const dropdownNin = document.querySelector("#dropdownNin");
 let expandedNin = false;
 
 buttonNin.addEventListener("click", () => {
-  console.log()
+  console.log();
   if (!expandedNin) {
     dropdownNin.style.display = "flex";
     buttonNin.style.padding = "16px";
@@ -86,17 +85,17 @@ buttonNin.addEventListener("click", () => {
   buttonNin.classList.toggle("active");
 });
 
-nav = document.getElementById("navbar")
+nav = document.getElementById("navbar");
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      nav.style.top = "0";
-    } else {
-      nav.style.top = "-100px";
-    }
-    prevScrollpos = currentScrollPos;
-}
+  if (prevScrollpos > currentScrollPos) {
+    nav.style.top = "0";
+  } else {
+    nav.style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+};
 
 // const leftArrow = document.querySelector('#left-arrow');
 // const rightArrow = document.querySelector('#right-arrow');
@@ -125,3 +124,38 @@ window.onscroll = function() {
 //   leftItem.classList.remove('carousel-item-left');
 //   leftItem.classList.add('carousel-item-center');
 // }
+
+// bildekarusell
+
+const left = document.querySelector("#left");
+const right = document.querySelector("#right");
+
+let i = 0;
+
+let img1 = document.querySelector("#img1");
+let img2 = document.querySelector("#img2");
+let img3 = document.querySelector("#img3");
+
+let images = [img1, img2, img3];
+
+right.addEventListener("click", () => {
+  i++;
+  if (i === images.length) {
+    i = 0;
+  }
+  images.forEach((image) => {
+    image.style.display = "none";
+  });
+  images[i].style.display = "block";
+});
+
+left.addEventListener("click", () => {
+  i--;
+  if (i < 0) {
+    i = images.length - 1;
+  }
+  images.forEach((image) => {
+    image.style.display = "none";
+  });
+  images[i].style.display = "block";
+});

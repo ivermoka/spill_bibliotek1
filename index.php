@@ -14,11 +14,12 @@ $mysqli = new mysqli(
 
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
-  $brukernavn = mysqli_real_escape_string($mysqli, $_POST["brukernavn"]);
+  $brukernavn = mysqli_real_escape_string($mysqli, $_POST["brukernavn"]); //plaintext
   $passord = mysqli_real_escape_string($mysqli, $_POST["passord"]);
-  $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (NULL, '$brukernavn', '$passord', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
+  $pw_hash = password_hash($passord, PASSWORD_BCRYPT); // kryptert string (hash)
+  $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (NULL, '$brukernavn', '$pw_hash', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
+  echo password_verify($passord, $pw_hash);
   echo $sql;
- 
   if ($mysqli->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
@@ -33,6 +34,15 @@ if (!$mysqli){
     die("connection failed: " . mysqli_connect_error());
 }
 echo "Connection succeessfully";
+
+$Select_Spill = "SELECT * FROM Spill"
+$result = mysqli_query($mysqli, $Select_Spill)
+if ($result->num_rows> 0){
+  $data = array();
+  while ($row = $result ->fetch_assoc()){
+    $data[]=$row
+  }
+}
 
 // $sql_fetch_things = "SELECT * FROM Brukere";
 
