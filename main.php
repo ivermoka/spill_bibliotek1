@@ -32,17 +32,17 @@
     <div
       class="text-white text-xl flex justify-between items-center w-80 h-full"
     >
-      <a
+      <a href="ps.html"
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >PlayStation</span
         ></a
       >
-      <a
+      <a href="xbox.html"
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >Xbox</span
         ></a
       >
-      <a
+      <a href="nintendo.html"
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >Nintendo</span
         ></a
@@ -71,13 +71,13 @@
       class="bg-slate-500 text-white text-xl min-h-1/2 px-5 absolute left-0 hidden flex-col items-center rounded-b-lg z-10"
     >
       <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a>PlayStation</a></span
+        ><a href="ps.html">PlayStation</a></span
       >
       <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a>Xbox</a></span
+        ><a href="xbox.html">Xbox</a></span
       >
       <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a>Nintendo</a></span
+        ><a href="nintendo.html">Nintendo</a></span
       >
       <span class="cursor-pointer hover:underline underline-offset-8 my-10"
         ><a>Log In</a></span
