@@ -25,10 +25,6 @@ if(isset($_REQUEST['registrer'])){
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($mysqli);
 }
-} else {
-  echo "knapp ikke trykket på";
-
-}
 
 $sql_delete = "DELETE FROM Brukere";
 //mysqli_query($conn, $sql_delete);
