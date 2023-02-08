@@ -15,14 +15,18 @@ $mysqli = new mysqli(
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
   $brukernavn = mysqli_real_escape_string($mysqli, $_POST["brukernavn"]);
-  $passord = mysqli_real_escape_string($mysqli, $_POST["passord"]);
-  $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (NULL, '$brukernavn', '$passord', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
-  echo $sql;
+  $passord = mysqli_real_escape_string($mysqli, $_POST["passord"]); //plaintext
+  $pw_hash = password_hash($passord, PASSWORD_BCRYPT); // kryptert string (hash)
+  $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (NULL, '$brukernavn', '$pw_hash', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
+  echo password_verify($passord, $pw_hash);
   if ($mysqli->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($mysqli);
 }
+} else {
+  echo "knapp ikke trykket på";
+
 }
 
 $sql_delete = "DELETE FROM Brukere";
