@@ -35,14 +35,6 @@ if (!$mysqli){
 }
 echo "Connection succeessfully";
 
-$Select_Spill = "SELECT * FROM Spill"
-$result = mysqli_query($mysqli, $Select_Spill)
-if ($result->num_rows> 0){
-  $data = array();
-  while ($row = $result ->fetch_assoc()){
-    $data[]=$row
-  }
-}
 
 // $sql_fetch_things = "SELECT * FROM Brukere";
 

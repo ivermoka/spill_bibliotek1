@@ -1,3 +1,23 @@
+<?php include('spill.php')?>
+<?php
+
+$db_host = 'localhost';
+$db_user = 'root';
+$db_password = 'root';
+$db_db = 'Spillbibliotek1';
+$db_port = 8888;
+$mysqli = new mysqli(
+  $db_host,
+  $db_user,
+  $db_password,
+  $db_db
+);
+$Select_Spill = "SELECT * FROM Spill";
+$result = mysqli_query($mysqli, $Select_Spill);
+while( $row = $result->fetch_array()){
+  print_r($row);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -162,7 +182,7 @@
         >
           PlayStation
         </header>
-        <section id="ps4" class="bg-red-400 min-h-screen">
+        <section id="ps4" class="min-h-96">
           <div class="p-0 lg:p-16 md:p-16 sm:p-0">
             <h1
               class="text-white text-5xl italic sm:justify-center lg:block md:block sm:flex flex justify-center"
@@ -179,23 +199,62 @@
               />
             </svg>
           </div>
-          <div class=" grid w-4/5 ml-40 h-screen grid-rows-2 grid-flow-col min-h-full">
-            <div class="bg-white border-4 h-full mr-32 rounded-2xl">
-              <div class="w-full h-2/3  overflow-hidden">
-                <img class="w-1/2 -mt-40 h-fit" src="imgelias/gow.jpeg" alt="">
+          <div class="grid w-screen h-96 gap-48 grid-flow-col grid-col-2 justify-center">
+            <div class="bg-white w-full border-4 h-full rounded-2xl">
+              <div class="w-96 h-2/3  overflow-hidden items-center justify-center flex">
+                <img class="max-w-xs h-60" src="imgelias/gow1.png" alt="">
               </div>
-              <div class="w-full h-1/3 border-t-2 border-t-black"></div>
+              <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
+                <div>PLACEHOLDER</div>
+                <div>
+                  <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                </div>
+              </div>
             </div>
-            <div class="bg-white border-4 h-full mr-32 mt-10 rounded-2xl">
-              
-            </div>
-            <div class="bg-white border-4 h-full ml-32 rounded-2xl">
 
-            </div>
-            <div class="bg-white border-4 h-full ml-32 mt-10 rounded-2xl">
-
+            <div class="bg-white w-full border-4 h-full rounded-2xl">
+              <div class="w-96 h-2/3  overflow-hidden items-center justify-center flex">
+                <img class="object-contain h-60" src="imgelias/tlou2.jpeg" alt="">
+              </div>
+              <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
+                <div>PLACEHOLDER</div>
+                <div>
+                  <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                </div>
+              </div>
             </div>
           </div>
+            
+  
+        </section>
+        <section class="h-screen mt-20 ">
+          <div class="grid w-screen h-96 gap-48 grid-flow-col grid-col-2 justify-center">
+            <div class="bg-white w-full border-4 h-full rounded-2xl">
+              <div class="w-96 h-2/3  overflow-hidden items-center justify-center flex">
+                <img class="max-w-xs h-60" src="imgelias/rdr2.jpeg" alt="">
+              </div>
+              <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
+                <div>PLACEHOLDER</div>
+                <div>
+                  <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white w-full border-4 h-full rounded-2xl">
+              <div class="w-96 h-2/3  overflow-hidden items-center justify-center flex">
+                <img class="object-contain h-60" src="imgelias/gtaV.jpeg" alt="">
+              </div>
+              <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
+                <div>PLACEHOLDER</div>
+                <div>
+                  <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+          
         </section>
       </main>
     </div>
