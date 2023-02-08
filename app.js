@@ -51,7 +51,6 @@ const dropdownXbox = document.querySelector("#dropdownXbox");
 let expandedXbox = false;
 
 buttonXbox.addEventListener("click", () => {
-  console.log()
   if (!expandedXbox) {
     dropdownXbox.style.display = "flex";
     buttonXbox.style.padding = "16px";
@@ -90,7 +89,6 @@ buttonNin.addEventListener("click", () => {
 nav = document.getElementById("navbar")
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
-  console.log("hei")
   var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       nav.style.top = "0";
