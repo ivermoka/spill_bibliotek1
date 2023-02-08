@@ -19,6 +19,7 @@ if(isset($_REQUEST['registrer'])){
   $pw_hash = password_hash($passord, PASSWORD_BCRYPT); // kryptert string (hash)
   $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (NULL, '$brukernavn', '$pw_hash', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
   echo password_verify($passord, $pw_hash);
+  echo $sql;
   if ($mysqli->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
