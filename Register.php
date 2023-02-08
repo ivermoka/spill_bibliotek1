@@ -11,8 +11,14 @@ $mysqli = new mysqli(
   $db_password,
   $db_db
 );
-$Select_Spill = "SELECT * FROM Spill";
-$result = mysqli_query($mysqli, $Select_Spill);
+$result = mysqli_query($mysqli, "SELECT Title, Utvikler FROM Spill WHERE SPillID = 1");
+if ($result) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "Title: " . $row['Title'] . ", Utvikler: " . $row['Utvikler'] . "<br>";
+    }
+
+
+
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
   $brukernavn = mysqli_real_escape_string($mysqli, $_POST["brukernavn"]); //plaintext
@@ -32,7 +38,7 @@ $sql_delete = "DELETE FROM Brukere";
 //mysqli_query($conn, $sql_delete);
 
 if (!$mysqli){
-    die("connection failed: " . mysqli_connect_error());
+    die("connection failed: " . mysqli_connect_error($mysqli));
 }
 echo "Connection succeessfully";
 

@@ -12,11 +12,13 @@ $mysqli = new mysqli(
   $db_password,
   $db_db
 );
-$Select_Spill = "SELECT * FROM Spill";
-$result = mysqli_query($mysqli, $Select_Spill);
-while( $row = $result->fetch_array()){
-  print_r($row);
+
+
+
+if ($mysqli->connect_errno) {
+  echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -182,7 +184,7 @@ while( $row = $result->fetch_array()){
         >
           PlayStation
         </header>
-        <section id="ps4" class="min-h-96">
+        <section id="ps4" class="bg-red-400 min-h-screen">
           <div class="p-0 lg:p-16 md:p-16 sm:p-0">
             <h1
               class="text-white text-5xl italic sm:justify-center lg:block md:block sm:flex flex justify-center"
@@ -217,7 +219,7 @@ while( $row = $result->fetch_array()){
                 <img class="object-contain h-60" src="imgelias/tlou2.jpeg" alt="">
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
-                <div>PLACEHOLDER</div>
+                <div></div>
                 <div>
                   <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
                 </div>
@@ -246,7 +248,13 @@ while( $row = $result->fetch_array()){
                 <img class="object-contain h-60" src="imgelias/gtaV.jpeg" alt="">
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
-                <div>PLACEHOLDER</div>
+                <div><?php 
+                $result = mysqli_query($mysqli, "SELECT Title, Utvikler FROM Spill WHERE SPillID = 1");
+                  if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                      echo "Title: " . $row['Title'] . ", Utvikler: " . $row['Utvikler'] . "<br>";
+                      };?>           
+                       </div>
                 <div>
                   <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
                 </div>
@@ -260,3 +268,4 @@ while( $row = $result->fetch_array()){
     </div>
   </body>
 </html>
+
