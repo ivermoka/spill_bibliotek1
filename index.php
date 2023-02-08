@@ -19,7 +19,7 @@ if(isset($_REQUEST['registrer'])){
   $passord = mysqli_real_escape_string($mysqli, $_POST["passord"]);
   $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (NULL, '$brukernavn', '$passord', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
   echo $sql;
-  // $result = mysqli_query($conn, $sql);
+ 
   if ($mysqli->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
