@@ -11,8 +11,7 @@ $mysqli = new mysqli(
   $db_password,
   $db_db
 );
-$Select_Spill = "SELECT * FROM Spill";
-$result = mysqli_query($mysqli, $Select_Spill);
+
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
   $brukernavn = mysqli_real_escape_string($mysqli, $_POST["brukernavn"]); //plaintext
