@@ -12,14 +12,12 @@ $mysqli = new mysqli(
   $db_db
 );
 
-
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
   $brukernavn = mysqli_real_escape_string($mysqli, $_POST["brukernavn"]);
   $passord = mysqli_real_escape_string($mysqli, $_POST["passord"]);
   $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (NULL, '$brukernavn', '$passord', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
   echo $sql;
-  // $result = mysqli_query($conn, $sql);
   if ($mysqli->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
@@ -34,8 +32,6 @@ if (!$mysqli){
     die("connection failed: " . mysqli_connect_error());
 }
 echo "Connection succeessfully";
-
-
 
 // $sql_fetch_things = "SELECT * FROM Brukere";
 
