@@ -14,13 +14,11 @@ $mysqli = new mysqli(
 
 $Select_Spill = "SELECT * FROM Spill";
 $result = mysqli_query($mysqli, $Select_Spill);
-if ($result->num_rows> 0) {
+if ($result->num_rows > 0) {
   $data = array();
   while ($row = $result ->fetch_assoc()){
     $data[]=$row;
   }
 }
-
-
 
 ?>
