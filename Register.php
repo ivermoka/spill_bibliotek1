@@ -11,7 +11,8 @@ $mysqli = new mysqli(
   $db_password,
   $db_db
 );
-
+$Select_Spill = "SELECT * FROM Spill";
+$result = mysqli_query($mysqli, $Select_Spill);
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
   $brukernavn = mysqli_real_escape_string($mysqli, $_POST["brukernavn"]); //plaintext
@@ -35,14 +36,6 @@ if (!$mysqli){
 }
 echo "Connection succeessfully";
 
-$Select_Spill = "SELECT * FROM Spill"
-$result = mysqli_query($mysqli, $Select_Spill)
-if ($result->num_rows> 0){
-  $data = array();
-  while ($row = $result ->fetch_assoc()){
-    $data[]=$row
-  }
-}
 
 // $sql_fetch_things = "SELECT * FROM Brukere";
 
