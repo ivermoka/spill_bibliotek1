@@ -14,11 +14,12 @@ $mysqli = new mysqli(
 $conn = mysqli_connect($db_host, $db_user, $db_password, $db_db );
 
 
+
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
   $brukernavn = mysqli_real_escape_string($conn, $_POST["brukernavn"]);
   $passord = mysqli_real_escape_string($conn, $_POST["passord"]);
-  $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (2, '$brukernavn', '$passord', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
+  $sql = "INSERT INTO Brukere (BrukerID, Brukernavn, Passord, Email, Navn, Tlf) VALUES (NULL, '$brukernavn', '$passord', 'Sindretf@drit', 'Sindre Fornes', 324234) ";
   echo $sql;
   $result = mysqli_query($conn, $sql);
   if (mysqli_query($conn, $sql)) {
@@ -27,8 +28,8 @@ if(isset($_REQUEST['registrer'])){
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 }
-
-
+$sql_delete = "DELETE FROM Brukere";
+//mysqli_query($conn, $sql_delete);
 
 if (!$conn){
     die("connection failed: " . mysqli_connect_error());
