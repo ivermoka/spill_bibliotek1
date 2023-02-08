@@ -97,3 +97,31 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 }
+
+// const leftArrow = document.querySelector('#left-arrow');
+// const rightArrow = document.querySelector('#right-arrow');
+
+// leftArrow.addEventListener('click', moveLeft);
+// rightArrow.addEventListener('click', moveRight);
+
+// function moveLeft() {
+//   const centerItem = document.querySelector('.carousel-item-center');
+//   const rightItem = document.querySelector('.carousel-item-right');
+
+//   centerItem.classList.remove('carousel-item-center');
+//   centerItem.classList.add('carousel-item-right');
+
+//   rightItem.classList.remove('carousel-item-right');
+//   rightItem.classList.add('carousel-item-center');
+// }
+
+// function moveRight() {
+//   const centerItem = document.querySelector('.carousel-item-center');
+//   const leftItem = document.querySelector('.carousel-item-left');
+
+//   centerItem.classList.remove('carousel-item-center');
+//   centerItem.classList.add('carousel-item-left');
+
+//   leftItem.classList.remove('carousel-item-left');
+//   leftItem.classList.add('carousel-item-center');
+// }

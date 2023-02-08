@@ -12,7 +12,6 @@ $mysqli = new mysqli(
   $db_db
 );
 
-
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
   $brukernavn = mysqli_real_escape_string($mysqli, $_POST["brukernavn"]);
@@ -34,8 +33,6 @@ if (!$mysqli){
     die("connection failed: " . mysqli_connect_error());
 }
 echo "Connection succeessfully";
-
-
 
 // $sql_fetch_things = "SELECT * FROM Brukere";
 
