@@ -11,6 +11,7 @@ $mysqli = new mysqli(
   $db_password,
   $db_db
 );
+$result = mysqli_query($mysqli, "SELECT Title, Utvikler FROM Spill WHERE SPillID = 1");
 
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);

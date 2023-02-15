@@ -1,5 +1,3 @@
-<?php?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,12 +35,12 @@
           >PlayStation</span
         ></a
       >
-      <a href="xbox.html"
+      <a
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >Xbox</span
         ></a
       >
-      <a href="nintendo.html"
+      <a
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >Nintendo</span
         ></a
@@ -71,13 +69,13 @@
       class="bg-slate-500 text-white text-xl min-h-1/2 px-5 absolute left-0 hidden flex-col items-center rounded-b-lg z-10"
     >
       <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a href="ps.html">PlayStation</a></span
+        ><a>PlayStation</a></span
       >
       <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a href="xbox.html">Xbox</a></span
+        ><a>Xbox</a></span
       >
       <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a href="nintendo.html">Nintendo</a></span
+        ><a>Nintendo</a></span
       >
       <span class="cursor-pointer hover:underline underline-offset-8 my-10"
         ><a>Log In</a></span
@@ -143,7 +141,7 @@
   <body class="h-screen">
     <div class="w-full h-3/4 overflow-hidden flex flex-col place-content-center justify-center mt-20  ">
         <img class="place-self-center z-1 -mt-20 w-3/7 h-1/3 absolute" src="imgelias/oblivionname.png" alt="">
-        <button class="absolute bg-slate-400 text-xl w-32 h-10 place-self-center mt-80 -ml-8 rounded-md active:scale-105 cursor-pointer z-10">Lei spill</button>
+        <button class="absolute bg-slate-400 text-xl w-32 h-10 place-self-center mt-80 -ml-8 rounded-md active:scale-105 cursor-pointer z-10"><a href="rent_screen.html">Lei spill</a></button>
         <video class="h-50 w-screen pointer-events-none" loop autoplay>
             <source class="h-full w-full" loop autoplay src="The Elder Scrolls IV Oblivion Trailer [TubeRipper.com].mp4" type="video/mp4">
         </video>
@@ -153,45 +151,77 @@
             <button class="w-36 h-14 bg-slate-400 rounded-xl" id="playstation">
                 <p class="">PlayStation</p>
                 <div id="dropdownPlaystation" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps4</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps3</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps Vita</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps4</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps3</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps Vita</a></span>
                 </div>
             </button>
             <button class="w-36 h-14 bg-slate-400 rounded-xl " id="xbox">Xbox
                 <div id="dropdownXbox" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>xbox series S</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>xbox series X</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>xbox one</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps4</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps3</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps Vita</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="xbox.html">Xbox One</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="xbox.html">Xbox 360</a></span>
                 </div>
             </button>
             <button class="w-36 h-14 bg-slate-400 rounded-xl " id="nintendo">Nintendo
                 <div id="dropdownNin" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>switch</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>wii</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>DS</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps4</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps3</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps Vita</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Nintendo DS</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Nintendo Switch</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Wii</a></span>
                 </div>
             </button>
         </div>
-        <div>
-
-        </div>
     </div>
-    <div id="carousel" class="w-screen h-screen flex flex-row justify-center items-center bg-red-400 select-none">
-
-      <div id="left" class="duration-500 ease-in-out flex justify-center items-center -m-12 z-20">
+    <h1 class="text-center text-white text-6xl mt-32">Bestsellers</h1>
+    <div id="carousel" class="h-screen flex flex-row justify-center items-center select-none">
+      <div id="left" class="duration-500 ease-in-out flex justify-center items-center m-5 z-20">
         <svg xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875" class="cursor-pointer hover:scale-110 duration-300 active:scale-90">
           <path id="Icon_awesome-arrow-alt-circle-right" data-name="Icon awesome-arrow-alt-circle-right" d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z" transform="translate(35.438 35.438) rotate(180)" fill="#fff"/>
         </svg>        
       </div>
 
-      <div id="wrapper" class="bg-blue-400 w-8/12 lg:h-3/4 md:h-3/4 sm:h-1/2 h-2/5 flex translate-x-0 duration-500 ease-in-out overflow-hidden z-10">
+      <div id="wrapper" class="w-8/12 lg:h-3/4 md:h-3/4 sm:h-1/2 h-2/5 flex translate-x-0 duration-500 ease-in-out overflow-hidden z-10 rounded-2xl">
         <img id="img1" src="imgelias/fortnite.png" alt="fortnite" class="w-full h-full object-cover block duration-300 ease-in-out">
         <img id="img2" src="imgelias/oblivion.png" alt="obliviion" class="w-full h-full object-cover hidden duration-300 ease-in-out">
         <img id="img3" src="imgelias/xdd.png" alt="xdd" class="w-full h-full object-cover hidden duration-300 ease-in-out">
       </div>
 
-      <div id="right" class="duration-500 ease-in-out flex justify-center items-center -m-12 z-20">
+      <div id="right" class="duration-500 ease-in-out flex justify-center items-center m-5 z-20">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875" class="cursor-pointer hover:scale-110 duration-300 active:scale-90">
+          <path id="Icon_awesome-arrow-alt-circle-right" data-name="Icon awesome-arrow-alt-circle-right" d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z" transform="translate(-0.563 -0.563)" fill="#fff"/>
+        </svg>           
+      </div>
+      
+      <!-- <button class="bg-white " id="left-arrow">Left</button>
+      <div class="carousel-item w-full h-full float-left transform scale-75 flex flex-row">
+        <div class="w-1/2 h-1/2 bg-white">1</div>
+        <div class="w-1/2 h-1/2 bg-white">2</div>
+        <div class="w-1/2 h-1/2 bg-white">3</div>
+     </div> 
+     <button class="bg-white" id="right-arrow">Right</button> -->
+    </div>
+
+
+    <h1 class="text-center text-white text-6xl">On Sale</h1>
+    <div id="carousel-sale" class="h-screen flex flex-row justify-center items-center select-none">
+      <div id="left-sale" class="duration-500 ease-in-out flex justify-center items-center m-5 z-20">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875" class="cursor-pointer hover:scale-110 duration-300 active:scale-90">
+          <path id="Icon_awesome-arrow-alt-circle-right" data-name="Icon awesome-arrow-alt-circle-right" d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z" transform="translate(35.438 35.438) rotate(180)" fill="#fff"/>
+        </svg>        
+      </div>
+
+      <div id="wrapper" class="w-8/12 lg:h-3/4 md:h-3/4 sm:h-1/2 h-2/5 flex translate-x-0 duration-500 ease-in-out overflow-hidden z-10 rounded-2xl">
+        <img id="img1-sale" src="imgelias/fortnite.png" alt="fortnite" class="w-full h-full object-cover block duration-300 ease-in-out">
+        <img id="img2-sale" src="imgelias/oblivion.png" alt="obliviion" class="w-full h-full object-cover hidden duration-300 ease-in-out">
+        <img id="img3-sale" src="imgelias/xdd.png" alt="xdd" class="w-full h-full object-cover hidden duration-300 ease-in-out">
+      </div>
+
+      <div id="right-sale" class="duration-500 ease-in-out flex justify-center items-center m-5 z-20">
         <svg xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875" class="cursor-pointer hover:scale-110 duration-300 active:scale-90">
           <path id="Icon_awesome-arrow-alt-circle-right" data-name="Icon awesome-arrow-alt-circle-right" d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z" transform="translate(-0.563 -0.563)" fill="#fff"/>
         </svg>           
