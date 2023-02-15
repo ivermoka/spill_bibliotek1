@@ -1,23 +1,24 @@
 
 <?php include("db.php");
 
-function writeTitle($spillId) {
-  $Get_game_name = 'SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = " . $spillId . ';
+$spillID = 1
+function writeTitle($spillID) {
+  $Get_game_name = 'SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = " . $spillID . ';
   $result = $mysqli->query($Get_game_name);
   if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
       echo $row['Title'] . "<br>";
-    }
+    }  
   } else {
     echo "no result!";
-  }
-}
-
-
-
-
-?>  
+  }  
+}  
+  
+  ?>  
 <!DOCTYPE html>
+
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

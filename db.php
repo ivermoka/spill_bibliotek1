@@ -4,7 +4,7 @@
 $db_host = 'localhost';
 $db_user = 'root';
 $db_password = 'root';
-$db_db = 'Spillbibliotek1';
+$db_name = 'Spillbibliotek1';
 $db_port = 8888;
 $mysqli = new mysqli( //connection object!
   $db_host,
@@ -13,7 +13,7 @@ $mysqli = new mysqli( //connection object!
   $db_db
 );
 
-$mysqli = new mysqli($host, $user, $pass, $db);
+$mysqli = new mysqli($db_host, $db_user, $db_password , $db_name);
 
 
 if($mysqli->connect_error) 
