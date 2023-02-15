@@ -2,9 +2,13 @@
 <?php include("db.php");
 
 
-function writeTitle($spillID) {
-  $Get_game_name = "SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = '1'";
-  echo $Get_game_name;
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+function writeTitle($spillID, $mysqli) {
+  $Get_game_name = "SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = $spillID";
   $result = $mysqli->query($Get_game_name);
   if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
@@ -209,7 +213,7 @@ function writeTitle($spillID) {
                 <img class="max-w-xs h-60" src="imgelias/gow1.png" alt="">
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
-                <div>PLACEHOLDER</div>
+                <div>PLACEHObyDER</div>
                 <div>
                 <a href="rent_screen.html"><button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button></a>
                 </div>
@@ -238,7 +242,7 @@ function writeTitle($spillID) {
                 <img class="max-w-xs h-60" src="imgelias/rdr2.jpeg" alt="">
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
-                <div>PLACEHOLDER</div>
+                <div><?php writeTitle(3, $mysqli); ?></div>
                 <div>
                   <a href="rent_screen.html"><button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button></a>
                 </div>
@@ -252,7 +256,7 @@ function writeTitle($spillID) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div><?php
                  
-                  writeTitle(1);
+                  writeTitle(1, $mysqli);
                   ?>           
                  </div>
                 <div>
@@ -317,7 +321,7 @@ function writeTitle($spillID) {
                 <img class="max-w-xs h-60" src="imgelias/rdr2.jpeg" alt="">
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
-                <div>PLACEHOLDER</div>
+                <div>PLACEDEEDDE</div>
                 <div>
                   <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
                 </div>

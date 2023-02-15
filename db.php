@@ -16,11 +16,11 @@ $mysqli = new mysqli( //connection object!
 $mysqli = new mysqli($db_host, $db_user, $db_password , $db_name);
 
 
-if($mysqli->connect_error) 
+if($mysqli->connect_error) {
     die('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
-else {
-    return $mysqli;
 }
+
+return $mysqli;
 
 
 ?>
