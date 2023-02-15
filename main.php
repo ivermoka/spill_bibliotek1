@@ -30,7 +30,7 @@
     <div
       class="text-white text-xl flex justify-between items-center w-80 h-full"
     >
-      <a
+      <a href="ps.html"
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >PlayStation</span
         ></a
@@ -141,7 +141,7 @@
   <body class="h-screen">
     <div class="w-full h-3/4 overflow-hidden flex flex-col place-content-center justify-center mt-20  ">
         <img class="place-self-center z-1 -mt-20 w-3/7 h-1/3 absolute" src="imgelias/oblivionname.png" alt="">
-        <button class="absolute bg-slate-400 text-xl w-32 h-10 place-self-center mt-80 -ml-8 rounded-md active:scale-105 cursor-pointer z-10">Lei spill</button>
+        <button class="absolute bg-slate-400 text-xl w-32 h-10 place-self-center mt-80 -ml-8 rounded-md active:scale-105 cursor-pointer z-10"><a href="rent_screen.html">Lei spill</a></button>
         <video class="h-50 w-screen pointer-events-none" loop autoplay>
             <source class="h-full w-full" loop autoplay src="The Elder Scrolls IV Oblivion Trailer [TubeRipper.com].mp4" type="video/mp4">
         </video>
@@ -151,9 +151,9 @@
             <button class="w-36 h-14 bg-slate-400 rounded-xl" id="playstation">
                 <p class="">PlayStation</p>
                 <div id="dropdownPlaystation" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps4</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps3</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps Vita</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps4</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps3</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps Vita</a></span>
                 </div>
             </button>
             <button class="w-36 h-14 bg-slate-400 rounded-xl " id="xbox">Xbox
@@ -161,6 +161,8 @@
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps4</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps3</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps Vita</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="xbox.html">Xbox One</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="xbox.html">Xbox 360</a></span>
                 </div>
             </button>
             <button class="w-36 h-14 bg-slate-400 rounded-xl " id="nintendo">Nintendo
@@ -168,6 +170,9 @@
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps4</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps3</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps Vita</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Nintendo DS</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Nintendo Switch</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Wii</a></span>
                 </div>
             </button>
         </div>
