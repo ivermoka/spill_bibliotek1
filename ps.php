@@ -1,7 +1,7 @@
 
 <?php include("db.php");
 
-$spillID = 1
+
 function writeTitle($spillID) {
   $Get_game_name = 'SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = " . $spillID . ';
   $result = $mysqli->query($Get_game_name);
@@ -248,6 +248,7 @@ function writeTitle($spillID) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div><?php
                   writeTitle();
+                  
                   ?>           
                  </div>
                 <div>
@@ -294,7 +295,10 @@ function writeTitle($spillID) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div>PLACEHOLDER</div>
                 <div>
-                  <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                  <form action="rent_screen.php" method="post">
+                    <p name="name">The last of us 2</p>
+                    <button type="submit" name="rentbutton" class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                  </form>
                 </div>
               </div>
             </div>
