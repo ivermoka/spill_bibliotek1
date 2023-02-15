@@ -1,5 +1,3 @@
-<?php?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,17 +30,17 @@
     <div
       class="text-white text-xl flex justify-between items-center w-80 h-full"
     >
-      <a href="ps.php"
+      <a href="ps.html"
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >PlayStation</span
         ></a
       >
-      <a href="xbox.html"
+      <a
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >Xbox</span
         ></a
       >
-      <a href="nintendo.html"
+      <a
         ><span class="cursor-pointer hover:underline underline-offset-8"
           >Nintendo</span
         ></a
@@ -160,12 +158,18 @@
             </button>
             <button class="w-36 h-14 bg-slate-400 rounded-xl " id="xbox">Xbox
                 <div id="dropdownXbox" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps4</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps3</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps Vita</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="xbox.html">Xbox One</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="xbox.html">Xbox 360</a></span>
                 </div>
             </button>
             <button class="w-36 h-14 bg-slate-400 rounded-xl " id="nintendo">Nintendo
                 <div id="dropdownNin" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps4</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps3</a></span>
+                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a>Ps Vita</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Nintendo DS</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Nintendo Switch</a></span>
                     <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Wii</a></span>

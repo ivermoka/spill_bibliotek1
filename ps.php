@@ -1,25 +1,22 @@
-<?php include('spill.php')?>
-<?php
 
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'Spillbibliotek1';
-$db_port = 8888;
-$mysqli = new mysqli(
-  $db_host,
-  $db_user,
-  $db_password,
-  $db_db
-);
+<?php include("db.php");
 
-
-
-if ($mysqli->connect_errno) {
-  echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+function writeTitle($spillId) {
+  $Get_game_name = 'SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = " . $spillId . ';
+  $result = $mysqli->query($Get_game_name);
+  if ($result) {
+    while ($row = mysqli_fetch_assoc($result)) {
+      echo $row['Title'] . "<br>";
+    }
+  } else {
+    echo "no result!";
+  }
 }
 
-?>
+
+
+
+?>  
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -248,13 +245,10 @@ if ($mysqli->connect_errno) {
                 <img class="object-contain h-60" src="imgelias/gtaV.jpeg" alt="">
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
-                <div><?php 
-                $result = mysqli_query($mysqli, "SELECT Title, Utvikler FROM Spill WHERE SpillID = '1'");
-                  if ($result) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                      echo "Title: " . $row['Title'] . ", Utvikler: " . $row['Utvikler'] . "<br>";
-                      };?>           
-                       </div>
+                <div><?php
+                  writeTitle();
+                  ?>           
+                 </div>
                 <div>
                   <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
                 </div>
