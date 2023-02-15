@@ -249,7 +249,7 @@ if ($mysqli->connect_errno) {
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div><?php 
-                $result = mysqli_query($mysqli, "SELECT Title, Utvikler FROM Spill WHERE SPillID = 1");
+                $result = mysqli_query($mysqli, "SELECT Title, Utvikler FROM Spill WHERE SpillID = '1'");
                   if ($result) {
                     while ($row = mysqli_fetch_assoc($result)) {
                       echo "Title: " . $row['Title'] . ", Utvikler: " . $row['Utvikler'] . "<br>";
