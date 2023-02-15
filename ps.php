@@ -3,18 +3,22 @@
 
 
 function writeTitle($spillID) {
-  $Get_game_name = 'SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = " . $spillID . ';
+  $Get_game_name = "SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = '1'";
+  echo $Get_game_name;
   $result = $mysqli->query($Get_game_name);
   if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
       echo $row['Title'] . "<br>";
+      
     }  
   } else {
     echo "no result!";
-  }  
+  }
+  
 }  
   
-  ?>  
+?>  
+
 <!DOCTYPE html>
 
 
@@ -43,7 +47,7 @@ function writeTitle($spillID) {
         >
           <div class="gap-6 h-2/3 text-center lg:flex md:flex sm:hidden hidden">
             <div class="height-full">
-              <a href="main.php">
+              <a href="main.html">
                 <img
                 src="imgelias/logo.png"
                 alt="logo"
@@ -249,7 +253,8 @@ function writeTitle($spillID) {
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div><?php
-                  writeTitle();
+                 
+                  writeTitle(1);
                   ?>           
                  </div>
                 <div>
