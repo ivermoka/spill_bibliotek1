@@ -215,7 +215,7 @@ function writeTitle($spillID, $mysqli) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div>PLACEHObyDER</div>
                 <div>
-                <a href="rent_screen.html"><button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button></a>
+                <a href="rent_screen.php"><button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button></a>
                 </div>
               </div>
             </div>
@@ -227,7 +227,9 @@ function writeTitle($spillID, $mysqli) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div></div>
                 <div>
-                  <a href="rent_screen.html"><button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button></a>
+                  <a href="rent_screen.php">
+                    <button type="submit" name="rentbutton" class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button> 
+                  </a>
                 </div>
               </div>
             </div>
@@ -244,7 +246,7 @@ function writeTitle($spillID, $mysqli) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div><?php writeTitle(3, $mysqli); ?></div>
                 <div>
-                  <a href="rent_screen.html"><button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button></a>
+                  <a href="rent_screen.php"><button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button></a>
                 </div>
               </div>
             </div>
@@ -303,10 +305,7 @@ function writeTitle($spillID, $mysqli) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div>PLACEHOLDER</div>
                 <div>
-                  <form action="rent_screen.php" method="post">
-                    <p name="name">The last of us 2</p>
-                    <button type="submit" name="rentbutton" class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
-                  </form>
+                  <p>euaue </p>
                 </div>
               </div>
             </div>
