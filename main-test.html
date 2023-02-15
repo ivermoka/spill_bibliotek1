@@ -14,183 +14,296 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="app.js" rel="stylesheet"></script>
     <title>Console Connection</title>
-    
   </head>
   <nav
-  id="navbar" class="bg-slate-500 w-screen h-20 px-12 flex justify-between items-center fixed duration-75 top-0 z-30"
->
-  <div class="gap-6 h-2/3 text-center lg:flex md:flex sm:hidden hidden">
-    <div class="height-full">
+    id="navbar"
+    class="bg-slate-500 w-screen h-20 px-12 flex justify-between items-center fixed duration-75 top-0 z-30"
+  >
+    <div class="gap-6 h-2/3 text-center lg:flex md:flex sm:hidden hidden">
+      <div class="height-full">
+        <a href="main.php">
+          <img
+            src="imgelias/logo.png"
+            alt="logo"
+            class="h-full w-full hover:animate-spin cursor-pointer"
+          />
+        </a>
+      </div>
+      <div
+        class="text-white text-xl flex justify-between items-center w-80 h-full"
+      >
+        <a href="ps.php"
+          ><span class="cursor-pointer hover:underline underline-offset-8"
+            >PlayStation</span
+          ></a
+        >
+        <a href="xbox.html"
+          ><span class="cursor-pointer hover:underline underline-offset-8"
+            >Xbox</span
+          ></a
+        >
+        <a href="nintendo.html"
+          ><span class="cursor-pointer hover:underline underline-offset-8"
+            >Nintendo</span
+          ></a
+        >
+      </div>
+    </div>
+    <div class="lg:hidden md:hidden sm:block block">
+      <svg
+        class="cursor-pointer"
+        id="hamburger"
+        viewBox="0 0 24 24"
+        width="34"
+        height="50"
+        fill="none"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line class="hamburger-line" x1="3" y1="12" x2="21" y2="12"></line>
+        <line class="hamburger-line" x1="3" y1="6" x2="21" y2="6"></line>
+        <line class="hamburger-line" x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <div
+        id="dropdown"
+        class="bg-slate-500 text-white text-xl min-h-1/2 px-5 absolute left-0 hidden flex-col items-center rounded-b-lg z-10"
+      >
+        <span class="cursor-pointer hover:underline underline-offset-8 my-10"
+          ><a>PlayStation</a></span
+        >
+        <span class="cursor-pointer hover:underline underline-offset-8 my-10"
+          ><a>Xbox</a></span
+        >
+        <span class="cursor-pointer hover:underline underline-offset-8 my-10"
+          ><a>Nintendo</a></span
+        >
+        <span class="cursor-pointer hover:underline underline-offset-8 my-10"
+          ><a>Log In</a></span
+        >
+        <span class="cursor-pointer hover:underline underline-offset-8 my-10"
+          ><a href="signup.html">Sign Up</a></span
+        >
+      </div>
+    </div>
+    <div class="h-2/3">
       <img
         src="imgelias/logo.png"
         alt="logo"
-        class="h-full w-full hover:animate-spin cursor-pointer"
+        class="h-full w-full hover:animate-spin lg:hidden md:hidden sm:block block cursor-pointer"
       />
     </div>
-    <div
-      class="text-white text-xl flex justify-between items-center w-80 h-full"
-    >
-      <a href="ps.php"
-        ><span class="cursor-pointer hover:underline underline-offset-8"
-          >PlayStation</span
-        ></a
-      >
-      <a href="xbox.html"
-        ><span class="cursor-pointer hover:underline underline-offset-8"
-          >Xbox</span
-        ></a
-      >
-      <a href="nintendo.html"
-        ><span class="cursor-pointer hover:underline underline-offset-8"
-          >Nintendo</span
-        ></a
-      >
-    </div>
-  </div>
-  <div class="lg:hidden md:hidden sm:block block">
-    <svg
-      class="cursor-pointer"
-      id="hamburger"
-      viewBox="0 0 24 24"
-      width="34"
-      height="50"
-      fill="none"
-      stroke="white"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <line class="hamburger-line" x1="3" y1="12" x2="21" y2="12"></line>
-      <line class="hamburger-line" x1="3" y1="6" x2="21" y2="6"></line>
-      <line class="hamburger-line" x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-    <div
-      id="dropdown"
-      class="bg-slate-500 text-white text-xl min-h-1/2 px-5 absolute left-0 hidden flex-col items-center rounded-b-lg z-10"
-    >
-      <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a>PlayStation</a></span
-      >
-      <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a>Xbox</a></span
-      >
-      <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a>Nintendo</a></span
-      >
-      <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a>Log In</a></span
-      >
-      <span class="cursor-pointer hover:underline underline-offset-8 my-10"
-        ><a href="signup.html">Sign Up</a></span
-      >
-    </div>
-  </div>
-  <div class="h-2/3">
-    <img
-      src="imgelias/logo.png"
-      alt="logo"
-      class="h-full w-full hover:animate-spin lg:hidden md:hidden sm:block block cursor-pointer"
-    />
-  </div>
-  <div class="flex gap-10 items-center">
-    <div
-      class="flex-col text-white text-sm hidden sm:hidden md:flex lg:flex"
-    >
-      <span class="cursor-pointer hover:underline">Log In</span>
-      <a href="signup.html"><span class="cursor-pointer hover:underline">Sign Up</span></a>
-    </div>
-    <div class="cursor-pointer">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="40.909"
-        height="51.956"
-        viewBox="0 0 54.909 51.956"
-      >
-        <g
-          id="Icon_feather-search"
-          data-name="Icon feather-search"
-          transform="translate(-3 -3)"
+    <div class="flex gap-10 items-center">
+      <div class="flex-col text-white text-sm hidden sm:hidden md:flex lg:flex">
+        <span class="cursor-pointer hover:underline">Log In</span>
+        <a href="signup.html"
+          ><span class="cursor-pointer hover:underline">Sign Up</span></a
         >
-          <path
-            id="Path_3"
-            data-name="Path 3"
-            d="M50.72,26.133c0,11.948-10.347,21.633-23.11,21.633S4.5,38.081,4.5,26.133,14.847,4.5,27.61,4.5s23.11,9.686,23.11,21.633Z"
-            transform="translate(0 0)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="3"
-          />
-          <path
-            id="Path_4"
-            data-name="Path 4"
-            d="M36,36,24.975,24.975"
-            transform="translate(19.79 16.837)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="3"
-          />
-        </g>
-      </svg>
+      </div>
+      <div class="cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40.909"
+          height="51.956"
+          viewBox="0 0 54.909 51.956"
+        >
+          <g
+            id="Icon_feather-search"
+            data-name="Icon feather-search"
+            transform="translate(-3 -3)"
+          >
+            <path
+              id="Path_3"
+              data-name="Path 3"
+              d="M50.72,26.133c0,11.948-10.347,21.633-23.11,21.633S4.5,38.081,4.5,26.133,14.847,4.5,27.61,4.5s23.11,9.686,23.11,21.633Z"
+              transform="translate(0 0)"
+              fill="none"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+            <path
+              id="Path_4"
+              data-name="Path 4"
+              d="M36,36,24.975,24.975"
+              transform="translate(19.79 16.837)"
+              fill="none"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+            />
+          </g>
+        </svg>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
   <body class="h-screen">
-    <div class="w-full h-3/4 overflow-hidden flex flex-col place-content-center justify-center mt-20  ">
-        <img class="place-self-center z-1 -mt-20 w-3/7 h-1/3 absolute" src="imgelias/oblivionname.png" alt="">
-        <button class="absolute bg-slate-400 text-xl w-32 h-10 place-self-center mt-80 -ml-8 rounded-md active:scale-105 cursor-pointer z-10"><a href="rent_screen.html">Lei spill</a></button>
-        <video class="h-50 w-screen pointer-events-none" loop autoplay>
-            <source class="h-full w-full" loop autoplay src="The Elder Scrolls IV Oblivion Trailer [TubeRipper.com].mp4" type="video/mp4">
-        </video>
+    <div
+      class="w-full h-3/4 overflow-hidden flex flex-col place-content-center justify-center mt-20"
+    >
+      <img
+        class="place-self-center z-1 -mt-20 w-3/7 h-1/3 absolute"
+        src="imgelias/oblivionname.png"
+        alt=""
+      />
+      <button
+        class="absolute bg-slate-400 text-xl w-32 h-10 place-self-center mt-80 -ml-8 rounded-md active:scale-105 cursor-pointer z-10"
+      >
+        <a href="rent_screen.html">Lei spill</a>
+      </button>
+      <video class="h-50 w-screen pointer-events-none" loop autoplay>
+        <source
+          class="h-full w-full"
+          loop
+          autoplay
+          src="The Elder Scrolls IV Oblivion Trailer [TubeRipper.com].mp4"
+          type="video/mp4"
+        />
+      </video>
     </div>
     <div class="h-1/2 w-screen flex flex-col">
-        <div class="h-96 w-full flex flex-row justify-evenly items-center">
-            <button class="w-36 h-14 bg-slate-400 rounded-xl" id="playstation">
-                <p class="">PlayStation</p>
-                <div id="dropdownPlaystation" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps4</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps3</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="ps.php">Ps Vita</a></span>
-                </div>
-            </button>
-            <button class="w-36 h-14 bg-slate-400 rounded-xl " id="xbox">Xbox
-                <div id="dropdownXbox" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="xbox.html">Xbox One</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="xbox.html">Xbox 360</a></span>
-                </div>
-            </button>
-            <button class="w-36 h-14 bg-slate-400 rounded-xl " id="nintendo">Nintendo
-                <div id="dropdownNin" class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg">
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Nintendo DS</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Nintendo Switch</a></span>
-                    <span class="cursor-pointer hover:underline underline-offset-8 my-10"><a href="nintendo.html">Wii</a></span>
-                </div>
-            </button>
-        </div>
+      <div class="h-96 w-full flex flex-row justify-evenly items-center">
+        <button
+          class="w-36 h-14 bg-slate-400 rounded-xl hover:scale-110 duration-300"
+          id="playstation"
+        >
+          <p class="">PlayStation</p>
+          <div
+            id="dropdownPlaystation"
+            class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg"
+          >
+            <span
+              class="cursor-pointer hover:underline underline-offset-8 my-10"
+              ><a href="ps.php">Ps4</a></span
+            >
+            <span
+              class="cursor-pointer hover:underline underline-offset-8 my-10"
+              ><a href="ps.php">Ps3</a></span
+            >
+            <span
+              class="cursor-pointer hover:underline underline-offset-8 my-10"
+              ><a href="ps.php">Ps Vita</a></span
+            >
+          </div>
+        </button>
+        <button
+          class="w-36 h-14 bg-slate-400 rounded-xl hover:scale-110 duration-300"
+          id="xbox"
+        >
+          Xbox
+          <div
+            id="dropdownXbox"
+            class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg"
+          >
+            <span
+              class="cursor-pointer hover:underline underline-offset-8 my-10"
+              ><a href="xbox.html">Xbox One</a></span
+            >
+            <span
+              class="cursor-pointer hover:underline underline-offset-8 my-10"
+              ><a href="xbox.html">Xbox 360</a></span
+            >
+          </div>
+        </button>
+        <button
+          class="w-36 h-14 bg-slate-400 rounded-xl hover:scale-110 duration-300"
+          id="nintendo"
+        >
+          Nintendo
+          <div
+            id="dropdownNin"
+            class="bg-slate-500 text-white text-xl min-h-1/2 px-5 mt-4 left-0 hidden flex-col items-center rounded-b-lg"
+          >
+            <span
+              class="cursor-pointer hover:underline underline-offset-8 my-10"
+              ><a href="nintendo.html">Nintendo DS</a></span
+            >
+            <span
+              class="cursor-pointer hover:underline underline-offset-8 my-10"
+              ><a href="nintendo.html">Nintendo Switch</a></span
+            >
+            <span
+              class="cursor-pointer hover:underline underline-offset-8 my-10"
+              ><a href="nintendo.html">Wii</a></span
+            >
+          </div>
+        </button>
+      </div>
     </div>
     <h1 class="text-center text-white text-6xl mt-32">Bestsellers</h1>
-    <div id="carousel" class="h-screen flex flex-row justify-center items-center select-none">
-      <div id="left" class="duration-500 ease-in-out flex justify-center items-center m-5 z-20">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875" class="cursor-pointer hover:scale-110 duration-300 active:scale-90">
-          <path id="Icon_awesome-arrow-alt-circle-right" data-name="Icon awesome-arrow-alt-circle-right" d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z" transform="translate(35.438 35.438) rotate(180)" fill="#fff"/>
-        </svg>        
+    <div
+      id="carousel"
+      class="h-screen flex flex-row justify-center items-center select-none"
+    >
+      <div
+        id="left"
+        class="duration-500 ease-in-out flex justify-center items-center m-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34.875"
+          height="34.875"
+          viewBox="0 0 34.875 34.875"
+          class="cursor-pointer hover:scale-110 duration-300 active:scale-90"
+        >
+          <path
+            id="Icon_awesome-arrow-alt-circle-right"
+            data-name="Icon awesome-arrow-alt-circle-right"
+            d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z"
+            transform="translate(35.438 35.438) rotate(180)"
+            fill="#fff"
+          />
+        </svg>
       </div>
 
-      <div id="wrapper" class="w-8/12 lg:h-3/4 md:h-3/4 sm:h-1/2 h-2/5 flex translate-x-0 duration-500 ease-in-out overflow-hidden z-10 rounded-2xl">
-        <img id="img1" src="imgelias/fortnite.png" alt="fortnite" class="w-full h-full object-cover block duration-300 ease-in-out">
-        <img id="img2" src="imgelias/oblivion.png" alt="obliviion" class="w-full h-full object-cover hidden duration-300 ease-in-out">
-        <img id="img3" src="imgelias/xdd.png" alt="xdd" class="w-full h-full object-cover hidden duration-300 ease-in-out">
+      <div
+        id="wrapper"
+        class="w-8/12 lg:h-3/4 md:h-3/4 sm:h-1/2 h-2/5 flex translate-x-0 duration-500 ease-in-out overflow-hidden z-10 rounded-2xl"
+      >
+        <img
+          id="img1"
+          src="imgelias/fortnite.png"
+          alt="fortnite"
+          class="w-full h-full object-cover block duration-300 ease-in-out"
+        />
+        <img
+          id="img2"
+          src="imgelias/oblivion.png"
+          alt="obliviion"
+          class="w-full h-full object-cover hidden duration-300 ease-in-out"
+        />
+        <img
+          id="img3"
+          src="imgelias/xdd.png"
+          alt="xdd"
+          class="w-full h-full object-cover hidden duration-300 ease-in-out"
+        />
       </div>
 
-      <div id="right" class="duration-500 ease-in-out flex justify-center items-center m-5 z-20">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875" class="cursor-pointer hover:scale-110 duration-300 active:scale-90">
-          <path id="Icon_awesome-arrow-alt-circle-right" data-name="Icon awesome-arrow-alt-circle-right" d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z" transform="translate(-0.563 -0.563)" fill="#fff"/>
-        </svg>           
+      <div
+        id="right"
+        class="duration-500 ease-in-out flex justify-center items-center m-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34.875"
+          height="34.875"
+          viewBox="0 0 34.875 34.875"
+          class="cursor-pointer hover:scale-110 duration-300 active:scale-90"
+        >
+          <path
+            id="Icon_awesome-arrow-alt-circle-right"
+            data-name="Icon awesome-arrow-alt-circle-right"
+            d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z"
+            transform="translate(-0.563 -0.563)"
+            fill="#fff"
+          />
+        </svg>
       </div>
-      
+
       <!-- <button class="bg-white " id="left-arrow">Left</button>
       <div class="carousel-item w-full h-full float-left transform scale-75 flex flex-row">
         <div class="w-1/2 h-1/2 bg-white">1</div>
@@ -200,27 +313,77 @@
      <button class="bg-white" id="right-arrow">Right</button> -->
     </div>
 
-
     <h1 class="text-center text-white text-6xl">On Sale</h1>
-    <div id="carousel-sale" class="h-screen flex flex-row justify-center items-center select-none">
-      <div id="left-sale" class="duration-500 ease-in-out flex justify-center items-center m-5 z-20">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875" class="cursor-pointer hover:scale-110 duration-300 active:scale-90">
-          <path id="Icon_awesome-arrow-alt-circle-right" data-name="Icon awesome-arrow-alt-circle-right" d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z" transform="translate(35.438 35.438) rotate(180)" fill="#fff"/>
-        </svg>        
+    <div
+      id="carousel-sale"
+      class="h-screen flex flex-row justify-center items-center select-none"
+    >
+      <div
+        id="left-sale"
+        class="duration-500 ease-in-out flex justify-center items-center m-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34.875"
+          height="34.875"
+          viewBox="0 0 34.875 34.875"
+          class="cursor-pointer hover:scale-110 duration-300 active:scale-90"
+        >
+          <path
+            id="Icon_awesome-arrow-alt-circle-right"
+            data-name="Icon awesome-arrow-alt-circle-right"
+            d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z"
+            transform="translate(35.438 35.438) rotate(180)"
+            fill="#fff"
+          />
+        </svg>
       </div>
 
-      <div id="wrapper" class="w-8/12 lg:h-3/4 md:h-3/4 sm:h-1/2 h-2/5 flex translate-x-0 duration-500 ease-in-out overflow-hidden z-10 rounded-2xl">
-        <img id="img1-sale" src="imgelias/fortnite.png" alt="fortnite" class="w-full h-full object-cover block duration-300 ease-in-out">
-        <img id="img2-sale" src="imgelias/oblivion.png" alt="obliviion" class="w-full h-full object-cover hidden duration-300 ease-in-out">
-        <img id="img3-sale" src="imgelias/xdd.png" alt="xdd" class="w-full h-full object-cover hidden duration-300 ease-in-out">
+      <div
+        id="wrapper"
+        class="w-8/12 lg:h-3/4 md:h-3/4 sm:h-1/2 h-2/5 flex translate-x-0 duration-500 ease-in-out overflow-hidden z-10 rounded-2xl"
+      >
+        <img
+          id="img1-sale"
+          src="imgelias/fortnite.png"
+          alt="fortnite"
+          class="w-full h-full object-cover block duration-300 ease-in-out"
+        />
+        <img
+          id="img2-sale"
+          src="imgelias/oblivion.png"
+          alt="obliviion"
+          class="w-full h-full object-cover hidden duration-300 ease-in-out"
+        />
+        <img
+          id="img3-sale"
+          src="imgelias/xdd.png"
+          alt="xdd"
+          class="w-full h-full object-cover hidden duration-300 ease-in-out"
+        />
       </div>
 
-      <div id="right-sale" class="duration-500 ease-in-out flex justify-center items-center m-5 z-20">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875" class="cursor-pointer hover:scale-110 duration-300 active:scale-90">
-          <path id="Icon_awesome-arrow-alt-circle-right" data-name="Icon awesome-arrow-alt-circle-right" d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z" transform="translate(-0.563 -0.563)" fill="#fff"/>
-        </svg>           
+      <div
+        id="right-sale"
+        class="duration-500 ease-in-out flex justify-center items-center m-5 z-20"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34.875"
+          height="34.875"
+          viewBox="0 0 34.875 34.875"
+          class="cursor-pointer hover:scale-110 duration-300 active:scale-90"
+        >
+          <path
+            id="Icon_awesome-arrow-alt-circle-right"
+            data-name="Icon awesome-arrow-alt-circle-right"
+            d="M18,.563A17.438,17.438,0,1,1,.563,18,17.434,17.434,0,0,1,18,.563ZM9.844,21.094H18v4.985a.844.844,0,0,0,1.441.6L27.478,18.6a.836.836,0,0,0,0-1.188L19.441,9.323a.844.844,0,0,0-1.441.6v4.985H9.844A.846.846,0,0,0,9,15.75v4.5A.846.846,0,0,0,9.844,21.094Z"
+            transform="translate(-0.563 -0.563)"
+            fill="#fff"
+          />
+        </svg>
       </div>
-      
+
       <!-- <button class="bg-white " id="left-arrow">Left</button>
       <div class="carousel-item w-full h-full float-left transform scale-75 flex flex-row">
         <div class="w-1/2 h-1/2 bg-white">1</div>
@@ -230,7 +393,4 @@
      <button class="bg-white" id="right-arrow">Right</button> -->
     </div>
   </body>
-</html>
-
-</body>
 </html>
