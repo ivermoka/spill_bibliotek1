@@ -43,7 +43,7 @@ function writeTitle($spillID) {
         >
           <div class="gap-6 h-2/3 text-center lg:flex md:flex sm:hidden hidden">
             <div class="height-full">
-              <a href="main.html">
+              <a href="main.php">
                 <img
                 src="imgelias/logo.png"
                 alt="logo"
