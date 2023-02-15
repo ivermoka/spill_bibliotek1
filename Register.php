@@ -12,12 +12,6 @@ $mysqli = new mysqli(
   $db_db
 );
 $result = mysqli_query($mysqli, "SELECT Title, Utvikler FROM Spill WHERE SPillID = 1");
-if ($result) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "Title: " . $row['Title'] . ", Utvikler: " . $row['Utvikler'] . "<br>";
-    }
-
-
 
 if(isset($_REQUEST['registrer'])){
   var_dump($_POST);
