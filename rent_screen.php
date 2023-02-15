@@ -41,6 +41,15 @@
             </div>
         </div>
     </div>
+
+    <?php
+    if (isset($_REQUEST['rentbutton'])) {
+        echo $_REQUEST['name'];
+    } else {
+        echo "ingen data mottatt";
+    }
+    ?>
+
     <div class="flex flex-col bg-teal-900 lg:w-1/4 w-0 h-100 rounded-l-3xl sm:invisible sm:w-0 md:invisible md:w-0 lg:visible invisible">
         <div class="w-100 h-14 justify-between flex p-3">
             <span class="w-2/3 text-white text-lg lg:text-3xl md:text-xl sm:text-lg">Rental summary</span>

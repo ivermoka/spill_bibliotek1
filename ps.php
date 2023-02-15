@@ -1,23 +1,28 @@
 
 <?php include("db.php");
 
-function writeTitle($spillId) {
-  $Get_game_name = 'SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = " . $spillId . ';
+
+function writeTitle($spillID) {
+  $Get_game_name = "SELECT SpillID, Title, Utvikler FROM Spill WHERE SpillID = '1'";
+  echo $Get_game_name;
   $result = $mysqli->query($Get_game_name);
   if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
       echo $row['Title'] . "<br>";
-    }
+      
+    }  
   } else {
     echo "no result!";
   }
-}
-
-
-
-
+  
+}  
+  
 ?>  
+
 <!DOCTYPE html>
+
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -42,7 +47,7 @@ function writeTitle($spillId) {
         >
           <div class="gap-6 h-2/3 text-center lg:flex md:flex sm:hidden hidden">
             <div class="height-full">
-              <a href="main.php">
+              <a href="main.html">
                 <img
                 src="imgelias/logo.png"
                 alt="logo"
@@ -246,7 +251,8 @@ function writeTitle($spillId) {
               </div>
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div><?php
-                  writeTitle();
+                 
+                  writeTitle(1);
                   ?>           
                  </div>
                 <div>
@@ -293,7 +299,10 @@ function writeTitle($spillId) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div>PLACEHOLDER</div>
                 <div>
-                  <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                  <form action="rent_screen.php" method="post">
+                    <p name="name">The last of us 2</p>
+                    <button type="submit" name="rentbutton" class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                  </form>
                 </div>
               </div>
             </div>
