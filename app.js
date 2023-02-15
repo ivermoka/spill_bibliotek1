@@ -166,7 +166,7 @@ const rightSale = document.querySelector("#right-sale");
 let iSale = 0;
 
 let img1Sale = document.querySelector("#img1-sale");
-let img2Sale = document.querySelector("#img-sale");
+let img2Sale = document.querySelector("#img2-sale");
 let img3Sale = document.querySelector("#img3-sale");
 
 let imagesSale = [img1Sale, img2Sale, img3Sale];
