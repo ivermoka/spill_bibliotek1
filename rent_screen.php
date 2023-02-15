@@ -36,19 +36,10 @@
         <div class="w-1/2 h-full flex pr-1 flex-col lg:p-10 md:pr-5 sm:p-1 justify-evenly lg:invisible sm:invisible md:visible invisible">
             <img class="w-full h-1/3 lg:h-full md:h-1/2 sm:h-1/3" src="/imgelias/xdd.png" alt="placeholder">
             <div>
-                <span>Fortnite</span>
                 <span>fortnite er et spill</span>
             </div>
         </div>
     </div>
-
-    <?php
-    if (isset($_REQUEST['rentbutton'])) {
-        echo $_REQUEST['name'];
-    } else {
-        echo "ingen data mottatt";
-    }
-    ?>
 
     <div class="flex flex-col bg-teal-900 lg:w-1/4 w-0 h-100 rounded-l-3xl sm:invisible sm:w-0 md:invisible md:w-0 lg:visible invisible">
         <div class="w-100 h-14 justify-between flex p-3">
@@ -62,7 +53,7 @@
         </div>
         <div class="flex flex-col justify-evenly h-1/3 pl-10 text-xs lg:text-lg md:text-sm sm:text-xs">
             <div>
-                Fortnite
+                fortnite is not in the game
             </div>
             <div>
                 Fortnite er et spill hvor man løper rundt og hopper. 
