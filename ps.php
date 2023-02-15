@@ -209,7 +209,7 @@ if ($mysqli->connect_errno) {
               <div class="w-full h-1/3 border-t-2 border-t-black grid grid-flow-col items-center justify-around">
                 <div>PLACEHOLDER</div>
                 <div>
-                  <button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button>
+                <a href="rent_screen.html"><button class="bg-cyan-300 py-3 px-10 rounded-xl font-bold text-xl">Rent</button></a>
                 </div>
               </div>
             </div>
